@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         mcount=0;
         tv1=(TextView)findViewById(R.id.textView);
+        registerForContextMenu(tv1);
     }
 
     @Override
@@ -32,8 +33,8 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
-       // mcount++;
-      //  menu.add(0,2+mcount,0,"菜单"+mcount);
+        mcount++;
+        menu.add(0,2+mcount,0,"菜单"+mcount);
         return super.onPrepareOptionsMenu(menu);
     }
 
